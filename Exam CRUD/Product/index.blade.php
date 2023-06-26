@@ -28,14 +28,16 @@
         @foreach ($products as $product)
             <tr>
                 <td>{{ $product->created_at}}</td>
-                <td>{{ $product->name}}</td>
-                <td>{{ $product->weight}}</td>
-                <td>{{ $product->price}}</td>
+                <td>{{ $product->Name}}</td>
+                <td>{{ $product->Weight}}</td>
+                <td>{{ $product->Price}}</td>
+
                 <td>
                     <a href="{{ route('edit', ['id' => $product->id]) }}" class="btn btn-success btn-sm">Edit</a>
                     <a href="{{ route('show', ['id' => $product->id]) }}" class="btn btn-info btn-sm">Show</a>
                     <form action="{{ route('delete', ['id' => $product->id]) }}" method="POST" class="d-inline-block" id="deleteForm">
                         @csrf
+                        @method('POST')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirmDelete()">Delete</button>
                     </form>
 
@@ -51,7 +53,7 @@
 
                 </td>
             </tr>
-        @endforeach
+            @endforeach
     </tbody>
 </table>
 

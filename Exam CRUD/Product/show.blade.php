@@ -9,18 +9,18 @@
 
 <div class="form-group">
     <label>Name</label>
-    <input type="text" name="name" class="form-control" value="{{ $product->name}}" disabled>
+    <input type="text" name="name" class="form-control" value="{{ $product->Name}}" disabled>
 </div>
 <div class="form-group">
     <label>Color</label>
-    <input type="color" name="color" class="form-control" value="{{ $product->color}}" disabled>
+    <input type="color" name="color" class="form-control" value="{{ $product->Color}}" disabled>
 </div>
 <div class="form-group">
     <label>Weight</label>
-    <input type="text" name="weight" class="form-control" value="{{ $product->weight}}" disabled>
+    <input type="text" name="weight" class="form-control" value="{{ $product->Weight}}" disabled>
 </div>
 <div class="form-group">
     <label>Description</label>
-    <textarea name="description" rows="5" placeholder="product descripton" class="form-control" disabled>{{ $product->description }}</textarea>
+    <textarea name="description" rows="5" placeholder="product descripton" class="form-control" disabled>{{ $product->Description }}</textarea>
 </div>
 @endsection
